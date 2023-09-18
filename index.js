@@ -71,7 +71,7 @@ function multByThree (arr){
 }
 
 result = numbers.filter(five).map(multByThree);
-console.log(result);
+//console.log(result);
 
 
 /*****************************************************************
@@ -83,9 +83,13 @@ Part 4: Extra not required 🌶️🌶️🌶️
  * - Accepts an array
  * - Logs every element of the array
  ************************************/
-const logger = function (array) {
 
+// check this!
+const logger = function (array) {
+    return array;
 };
+
+//console.log(numbers.map(logger));
 
 /*************************************
  * toCelsius(temperatures)
@@ -98,9 +102,12 @@ const logger = function (array) {
  * The conversion is:
  *   C = (F - 32) * (5/9)
  ************************************/
+let test = [32, 50, 68, 86, 104];
 const toCelsius = function (temperatures) {
-
+    return (temperatures-32)*(5/9);
 };
+
+//console.log(test.map(toCelsius));
 
 /**************************************
  * hottestDays(temperatures, threshhold)
@@ -110,10 +117,13 @@ const toCelsius = function (temperatures) {
  * - Returns an array of temperatures
  *   that exceed the threshhold
  ***************************************/
+let hot = [50, 60, 70, 80, 90, 100];
+let max = 65;
 const hottestDays = function (temperatures, threshhold) {
-
+    return (temperatures > threshhold);
 };
 
+console.log(hot.filter(hottestDays));
 /******************************************
  * logHottestDays(temperatures, threshhold)
  *
@@ -131,3 +141,5 @@ const hottestDays = function (temperatures, threshhold) {
 const logHottestDays = function (temperatures, threshhold) {
 
 };
+
+
